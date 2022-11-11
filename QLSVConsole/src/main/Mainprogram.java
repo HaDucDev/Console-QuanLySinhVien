@@ -60,8 +60,9 @@ public class Mainprogram {
                 // kiem tra sinh vien ton tai ko theo ma
                 System.out.println("Nhập mã sinh viên: ");
                 String maSinhVien = a.nextLine();
-                //SinhVien sv=new SinhVien(maSinhVien);
-                System.out.println("Sinh vien ton tai hay ko: "+functionHandle.kiemtratontaiSV(maSinhVien));
+                SinhVien sv=new SinhVien(maSinhVien);
+                System.out.println("Sinh vien ton tai hay ko: "+functionHandle.kiemtratontaiSV1(sv));// cach 1
+                //System.out.println("Sinh vien ton tai hay ko: "+functionHandle.kiemtratontaiSV(maSinhVien)); // cach 2
             }
             else if (luachonso==7) {
                 // xoa 1 sinh vien

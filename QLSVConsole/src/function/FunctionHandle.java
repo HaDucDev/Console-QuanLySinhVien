@@ -44,11 +44,24 @@ public class FunctionHandle {
     }
 
     //5. Kiểm tra xem sinh viên có tồn tại trong danh sách hay không. theo mssv
-    public boolean kiemtratontaiSV(SinhVien sv){
+    public boolean kiemtratontaiSV(SinhVien sv){// cach nay ko dung dc
         return this.dsSinhVien.contains(sv);
     }
 
-    public boolean kiemtratontaiSV(String maSV){
+    public int kiemtratontaiSV1(SinhVien sv){// ok
+        for (SinhVien i: dsSinhVien)
+        {
+            String a=i.getMaSinhVien();
+            if(a.compareTo(sv.getMaSinhVien()) == 0)
+            {
+                return 0;
+            }
+        }
+        return 1;
+        //return this.dsSinhVien.contains(sv);
+    }
+
+    public boolean kiemtratontaiSV(String maSV){//ok
         for (SinhVien i: dsSinhVien)
         {
             String a=i.getMaSinhVien();
@@ -106,12 +119,6 @@ public class FunctionHandle {
             }
         });
     }
-
-
-
-
-
-
 
 
 

@@ -50,7 +50,9 @@ public class SinhVien implements Comparable<SinhVien>{
     }
 
     @Override
-    public int compareTo(SinhVien o) {
+    public int compareTo(SinhVien o) {// ham nay trien khai tu Comparable<SinhVien>. dau vao co the là đối tượng nhưng hàm này chỉ có thể so sánh
+        // chuỗi thôi nhé. nói đúng hơn là so sánh tứ tự chuỗi. phần ở trong hàm là tham số truyền vào. nếu tham số mặc định (có sẵn)
+        // nó bé thua thì kết quả trả về là  1. tham số mặc định lớn hơn hơn thì -1. còn bằng nhau thì là 0.
         return this.maSinhVien.compareTo(o.maSinhVien);
     }
 }
