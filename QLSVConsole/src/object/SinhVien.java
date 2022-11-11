@@ -55,4 +55,14 @@ public class SinhVien implements Comparable<SinhVien>{
         // nó bé thua thì kết quả trả về là  1. tham số mặc định lớn hơn hơn thì -1. còn bằng nhau thì là 0.
         return this.maSinhVien.compareTo(o.maSinhVien);
     }
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof SinhVien) {
+            SinhVien another = (SinhVien) obj;
+            if (this.maSinhVien.equals(another.maSinhVien)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

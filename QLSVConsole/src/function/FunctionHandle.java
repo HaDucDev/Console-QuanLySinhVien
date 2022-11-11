@@ -44,7 +44,9 @@ public class FunctionHandle {
     }
 
     //5. Kiểm tra xem sinh viên có tồn tại trong danh sách hay không. theo mssv
-    public boolean kiemtratontaiSV(SinhVien sv){// cach nay ko dung dc
+    public boolean kiemtratontaiSV(SinhVien sv){// muốn dùng hàm contains chỉ để so sánh mã sinh viên thì phải override
+        // lại hàm equals theo ý muốn nếu ko nó sẽ so sánh hết tất cả các thuộc tính mà nếu chỉ có mã sinh viên thì 2 giá trị còn lại sẽ mặc đinh
+        // thôi nên mấy lần ra false đấy. Làm như thế này cách 1 vẫn hoạt động nhé. vì equals đó mình dùng với String
         return this.dsSinhVien.contains(sv);
     }
 

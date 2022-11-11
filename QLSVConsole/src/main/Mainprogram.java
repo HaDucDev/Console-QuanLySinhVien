@@ -61,8 +61,9 @@ public class Mainprogram {
                 System.out.println("Nhập mã sinh viên: ");
                 String maSinhVien = a.nextLine();
                 SinhVien sv=new SinhVien(maSinhVien);
-                System.out.println("Sinh vien ton tai hay ko: "+functionHandle.kiemtratontaiSV1(sv));// cach 1
+                //System.out.println("Sinh vien ton tai hay ko: "+functionHandle.kiemtratontaiSV1(sv));// cach 1
                 //System.out.println("Sinh vien ton tai hay ko: "+functionHandle.kiemtratontaiSV(maSinhVien)); // cach 2
+                System.out.println("Sinh vien ton tai hay ko: "+functionHandle.kiemtratontaiSV(sv)); //cách 3
             }
             else if (luachonso==7) {
                 // xoa 1 sinh vien
